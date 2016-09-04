@@ -8,21 +8,18 @@ import org.telegram.telegrambots.logging.BotLogger;
 
 public class MyTelegramProject extends TelegramLongPollingBot {
 	
-		public static final String BOT_USERNAME = "Jadow_Java_Bot";
-	    public static final String BOT_TOKEN = "265399472:AAFJLfSfChbekMmnMXcrhpT6J5OSeR7FJio";
 	    private static final String LOGTAG = "MAIN";
         
 	    @Override
         public String getBotUsername() {
-	    	return BOT_USERNAME;
+	    	return MyConfigs.BOT_USERNAME;
         }
 
         @Override
         public String getBotToken() {
-        	return BOT_TOKEN;
+        	return MyConfigs.BOT_TOKEN;
         }
         
-
         @Override
         public void onUpdateReceived(Update update) {
         	if(update.hasMessage())
